@@ -1,0 +1,14 @@
+{
+  "name": "namikoda-namikoda",
+  "version": "0.1.0",
+  "author": "namikoda",
+  "summary": "Replace magic IPs with human-readable references",
+  "license": "Apache-2.0",
+  "source": "https://github.com/namikoda/namikoda-puppet",
+  "project_page": "https://github.com/namikoda/namikoda-puppet",
+  "issues_url": "https://github.com/namikoda/namikoda-puppet/issues",
+  "dependencies": [
+  ],
+  "data_provider": null
+}
+
