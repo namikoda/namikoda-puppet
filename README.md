@@ -3,14 +3,17 @@
 #### Table of Contents
 
 1. [Description](#description)
-1. [Setup - The basics of getting started with ipsfor](#setup)
-    * [What ipsfor affects](#what-ipsfor-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with ipsfor](#beginning-with-ipsfor)
+1. [Compatibility](#compatibility)
+1. [Getting Started](#getting-started-with-namikoda)
+    * [Go get an API key](#go-get-an-api-key)
+    * [Set the key](#set-the-key)
 1. [Usage - Configuration options and additional functionality](#usage)
-1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-1. [Limitations - OS compatibility, etc.](#limitations)
-1. [Development - Guide for contributing to the module](#development)
+    * [ipv4sfor](#ipv4sfor)
+    * [ipv6sfor](#ipv6sfor)
+    * [value](#value)
+    * [puppetlabs/firewall integration](#puppetlabsfirewall-integration)
+1. [More Information](#more-information)
+1. [Development](#development)
 
 ## Description
 
@@ -42,13 +45,11 @@ That will let the library set the right headers in the REST calls.
 
 ## Usage
 
-### simple example
+### Functions
 
 #### ipv4sfor
 
 The `namikoda::ipv4sfor()` function takes one parameter, the ID of the site that you're trying to get the IPs for.  It returns an array of strings.  Each string is a CIDR-encoded IPv4 range.
-
-[ "185.199.108.0/22", "192.30.252.0/22" ], "ipv6s":[ "2620:112:3000::/44" ], "lastUpdate":"2017-04-27T04:41:27.384Z", "name":"Github webhooks", "owner":"public", "id":"github", "value":[ "185.199.108.0/22", "192.30.252.0/22", "2620:112:3000::/44" ]
 
 ```puppet
 notice (namikoda::ipv4sfor('github'))
@@ -73,7 +74,7 @@ notice (namikoda::value('github'))
 ```
 
 
-### puppetlabs/firewall example
+### puppetlabs/firewall integration
 
 This module integrates well with [puppetlabs/firewall](https://forge.puppet.com/puppetlabs/firewall).  Assuming that the firewall module is imported, you can iterate over the ranges returned by one of the functions above and create rules as you see fit.
 
