@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 describe 'namikoda::set_apikey' do
   it { is_expected.not_to eq(nil) }
   it { is_expected.to run.with_params('aaaabbbb-cccc-dddd-eeee-ffffgggghhhh') }
