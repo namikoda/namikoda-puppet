@@ -1,4 +1,5 @@
 # Namikoda
+[![Build Status](https://travis-ci.org/namikoda/namikoda-puppet.png?branch=master)](https://travis-ci.org/namikoda/namikoda-puppet)
 
 #### Table of Contents
 
